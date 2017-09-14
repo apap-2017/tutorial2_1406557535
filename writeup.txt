@@ -1,0 +1,42 @@
+Latihan 1 - hello world
+1. Tidak Compile Error, namun Whitelabel Error Page saat mengganti RequestMapping dan mengakses hello
+
+2. Tidak Compile Error, dan jika index() diganti dengan hello() halaman tetap bisa terakses
+
+3. Tidak Compile Error, dan jika return diubah jadi hello123, maka akan Whitelabel Error Page
+
+Pada halaman error tertulis bahwa :
+Error resolving template "hello123", template might not exist or might not be accessible by any of the configured Template Resolvers
+
+Menandakan, bahwa return tersebut akan mencari file template html, sedangkan hello123 tidak ada pada template sehingga akan menampilkan halaman error
+
+=======================================
+
+Latihan 2 - request string paramater
+1. Hasilnya berhasil, akan menampilkan halaman dari file greeting.html
+
+2. a. Hasilnya akan menampilkan halaman Whitelabel Error Page, dengan error yang tertulis : Required String parameter 'name' is not present. menandakan bahwa membutuhkan parameter name pada link
+
+b. saat ditambahkan required = false, maka link /greeting tanpa parameter name akan berhasil ditampilkan dan tidak memunculkan tampilan error
+
+3. berhasil, akan menampilkan halaman dengan value name dunia
+
+4. tulisan "Sapaan untuk user" tidak akan muncul, karena hal tersebut telah dimanipulasi oleh thymleaf pada perintah ekspresi th:text
+
+"In Thymeleaf, these model attributes (or context variables in Thymeleaf jargon) can be accessed with the following syntax: ${attributeName}, where attributeName in our case is messages. This is a Spring EL expression. In short, Spring EL (Spring Expression Language) is a language that supports querying and manipulating an object graph at runtime."
+
+=======================================
+
+Latihan 3 - Path Variable
+1. ​​localhost:8080/greeting/ akan menampilkan halaman dengan tulisan selamat datang dunia
+
+2. localhost:8080/greeting/chanek akan menampilkan halaman dengan tulisan selamat datang chanek
+
+=======================================
+
+Latihan Soal
+
+referensi : http://www.logicbig.com/tutorials/spring-framework/spring-web-mvc/spring-mvc-request-param/
+
+Berhasil melakukan perkalian sesuai dengan perintah pada tutorial.
+dapat dilihat pada source code dan file file pendukung latihan-mandiri*.jpg
